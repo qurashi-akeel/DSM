@@ -69,27 +69,36 @@
 #   print("")
 
 
-# # ========================#
-# #! Pattern-2 :
+# def filterNum(lst):
+#     l = []
+#     for i in lst:
+#         if str(type(i)) == "<class 'int'>":
+#             l.append(i)
+#     return l
 
-# i = 5
-# j = 5
+# print(filterNum([1, 2, 4, "jj", {1, 2}, ("test"), 3]))
 
-# while i > 0:
-#     i -= 1
-#     while j > 0:
-#         j -= 1
-#         print("+"*(i*j), end="")
-#     print("")
+l = []
 
-# i = 10
 
-# while i>0:
-#     print(i)
-#     i -= 1
+def iterate(j):
+    if type(j) == list or type(j) == set or type(j) == tuple:
+        iterate(j)
+    elif type(j) == int:
+        l.append(j)
 
-i = 0
 
-while i<10:
-    print(10-i)
-    i += 1
+def filterNum(lst):
+    iterate(lst)
+    return l
+
+
+print(filterNum((1,4)))
+
+
+'''
+main.py", line 85, in iterate
+    if type(j) == list or type(j) == set or type(j) == tuple:
+       ^^^^^^^^^^^^^^^
+RecursionError: maximum recursion depth exceeded in comparison
+'''
