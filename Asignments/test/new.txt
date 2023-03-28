@@ -1,0 +1,3 @@
+old file renamed using os:
+
+os.rename(oldname, newname)
