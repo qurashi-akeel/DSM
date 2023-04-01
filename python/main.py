@@ -78,22 +78,22 @@
 
 # print(filterNum([1, 2, 4, "jj", {1, 2}, ("test"), 3]))
 
-l = []
+# l = []
 
 
-def iterate(j):
-    if type(j) == list or type(j) == set or type(j) == tuple:
-        iterate(j)
-    elif type(j) == int:
-        l.append(j)
+# def iterate(j):
+#     if type(j) == list or type(j) == set or type(j) == tuple:
+#         iterate(j)
+#     elif type(j) == int:
+#         l.append(j)
 
 
-def filterNum(lst):
-    iterate(lst)
-    return l
+# def filterNum(lst):
+#     iterate(lst)
+#     return l
 
 
-print(filterNum((1,4)))
+# print(filterNum((1,4)))
 
 
 '''
@@ -102,3 +102,27 @@ main.py", line 85, in iterate
        ^^^^^^^^^^^^^^^
 RecursionError: maximum recursion depth exceeded in comparison
 '''
+
+def sieve_of_eratosthenes(n):
+
+    # array of n Trues: [True, True,...]
+    prime = [True for i in range(n+1)]
+
+    # Starting from 2
+    p = 2 
+
+    while (p**2 <= n):
+        # If prime[p] is not changed, then it is a prime
+        if (prime[p] == True):
+            # Update all multiples of p
+            for i in range(p**2, n+1, p):
+                prime[i] = False
+        p += 1
+
+    # Return a list of prime numbers
+    primes = [p for p in range(2, n+1) if prime[p]]
+    return primes
+
+# Find all primes between 1 to 100
+primes = sieve_of_eratosthenes(100)
+print(primes)
