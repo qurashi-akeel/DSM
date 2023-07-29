@@ -1,0 +1,27 @@
+body {
+  background: #000000;
+  color: aliceblue;
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 90vh;
+  font-size: 50px;
+}
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+}
+form > input,
+select {
+  width: 100%;
+  padding: 0.6rem 1rem;
+}
+
+input[type='submit'] {
+  cursor: pointer;
+}

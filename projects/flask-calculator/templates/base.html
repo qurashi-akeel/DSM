@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="My flask app for DSM">
+    <meta name="keywords" content="dsm, datascience, flask, api">
+    <meta name="author" content="Qurashi Akeel">
+    {% block head %}
+      <title>Calculator</title>
+      <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
+    {% endblock head %}
+  </head>
+  <body align="center">
+    {% block body %}
+    {% endblock body %}
+  </body>
+</html>
