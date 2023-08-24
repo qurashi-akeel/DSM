@@ -5,6 +5,7 @@ attrs==23.1.0
 backcall==0.2.0
 beautifulsoup4==4.12.2
 blinker==1.6.2
+bokeh==3.2.2
 bs4==0.0.1
 certifi==2023.7.22
 charset-normalizer==3.2.0
@@ -97,3 +98,4 @@ urllib3==2.0.4
 wcwidth==0.2.6
 Werkzeug==2.3.6
 wsproto==1.2.0
+xyzservices==2023.7.0
